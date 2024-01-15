@@ -1,0 +1,9 @@
+header nav form input {
+  margin-left: 10px;
+}
+header nav form input::-moz-placeholder {
+  padding-left: 20px;
+}
+header nav form input::placeholder {
+  padding-left: 20px;
+}/*# sourceMappingURL=indes.css.map */
