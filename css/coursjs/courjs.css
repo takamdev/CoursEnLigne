@@ -1,3 +1,8 @@
+body *, body *::after, body *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body header nav form input {
   padding-left: 30px !important;
   margin-left: 30px !important;

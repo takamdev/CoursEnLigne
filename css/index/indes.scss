@@ -136,7 +136,9 @@ main {
       align-items: center;
       justify-content: center;
       height: 400px;
+     
       background-image: url(../../image/Home\ BCover.jpg);
+      background-size: 100% 100%;
 
       p {
          position: relative;
@@ -181,11 +183,13 @@ main {
    display: flex;
    align-items: center;
    justify-content: space-between;
+  
    p {
       &:nth-child(2) {
          display: flex;
          @media screen and (max-width: 400px) {
-            gap: 30px;
+           
+            gap: 20px;
          }
          gap: 40px;
       }

@@ -1,3 +1,9 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 header nav form input {
   padding-left: 30px !important;
   margin-left: 30px !important;
@@ -146,6 +152,7 @@ main div.homeCover {
   justify-content: center;
   height: 400px;
   background-image: url(../../image/Home\ BCover.jpg);
+  background-size: 100% 100%;
 }
 main div.homeCover p {
   position: relative;
@@ -197,7 +204,7 @@ main div.homeCover p:nth-child(2) button {
 }
 @media screen and (max-width: 400px) {
   .homeFooter p:nth-child(2) {
-    gap: 30px;
+    gap: 20px;
   }
 }
 
