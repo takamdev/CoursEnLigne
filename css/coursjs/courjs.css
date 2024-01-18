@@ -1,0 +1,27 @@
+body header nav form input {
+  padding-left: 30px !important;
+  margin-left: 30px !important;
+  border: 2px solid rgba(0, 119, 255, 0.524) !important;
+}
+body header nav form .search {
+  position: absolute !important;
+  top: 10px !important;
+  left: 40px !important;
+}
+body header nav li:not(.panier, .profil) {
+  transition: all ease-in-out 0.5s;
+  font-weight: bolder;
+}
+body header nav li:not(.panier, .profil):hover {
+  color: rgb(145, 8, 236) !important;
+}
+body header nav li:not(.panier, .profil):hover:not(.dropdown-toggle):after {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(145, 8, 236) !important;
+  content: "";
+}
+body header nav li:not(.panier, .profil) a:hover {
+  color: rgb(145, 8, 236) !important;
+}/*# sourceMappingURL=courjs.css.map */

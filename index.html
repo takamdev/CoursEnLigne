@@ -3,22 +3,38 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="stylesheet" href="css/bootstrap.min.css" />
-      <link rel="stylesheet" href="css/all.min.css" />
-      <link rel="stylesheet" href="css/indes.css" />
-      <title>Document</title>
+      <link rel="stylesheet" href="css/framwork/bootstrap.min.css" />
+      <link rel="stylesheet" href="css/libraries/all.min.css" />
+      <link rel="stylesheet" href="css/index/indes.css" />
+      <title>Acceuil</title>
    </head>
    <body>
+                              <!-- Modal pour la connexion -->
+      <div class="modal fade "  id="Letter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+         <div class="modal-dialog " >
+         <div class="modal-content">
+            <div class="modal-header">
+               <h1 class="modal-title fs-5" id="staticBackdropLabel">News Letter</h1>
+               <button type="button" class="btn btn-secondary closeBtnModal" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div  class="modal-body">
+               <p>
+                  merci d'avoir enregitre votre email, <br>
+                  nous vous enverront constemment des nouveaux cours à l'adress <span id="modalMail"></span>
+               </p>
+            
+            </div>
+         </div>
+         </div>
+      </div>
+ 
       <header>
          <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-               <a class="navbar-brand" href="#"
-                  ><img
-                     src="image/logo.png"
+               <a class="navbar-brand" href="#"><img src="image/logo.png"
                      alt="image"
                      width="50"
-                     class="ms-4"
-               /></a>
+                     class="ms-4 logo"/></a>
 
                <button
                   class="navbar-toggler"
@@ -37,19 +53,19 @@
                >
                   <form class="d-flex position-relative" role="search">
                      <input
-                        class="form-control me-2 ms-sm-0"
+                        class="form-control shadow-none"
                         type="search"
                         placeholder="Nom du Cours"
                         aria-label="Search"
                      />
                      <i
-                        class="fa-solid fa-magnifying-glass"
-                        style="position:  absolute; top: 10px; left: 20px"
+                        class="fa-solid fa-magnifying-glass search"
+                       
                      ></i>
                   </form>
                   <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"
+                        <a class="nav-link" style="color: rgb(145, 8, 236);" aria-current="page" href="#"
                            >Boutique</a
                         >
                      </li>
@@ -81,15 +97,12 @@
                            </li>
                         </ul>
                      </li>
-                     <li class="nav-item">
-                        <a class="nav-link" aria-disabled="true"
-                           ><i class="panier fa-solid fa-cart-shopping"></i
-                           >(<span>0</span>)</a
-                        >
+                     <li class="nav-item panier">
+                        <a class="nav-link" aria-disabled="true"><i style="color: rgb(0, 119, 255);" class="fa-solid fa-cart-arrow-down"></i>(<span class="Npanier">0</span>)</a>
                      </li>
-                     <li class="nav-item">
+                     <li class="nav-item profil">
                         <a class="nav-link" aria-disabled="true"
-                           ><img
+                           ><img 
                               src="image/testimonial-1.png"
                               alt="image"
                               height="30"
@@ -100,7 +113,276 @@
             </div>
          </nav>
       </header>
+
+      <main class="container-fluid">
+         <section>
+            <article class="baniere">
+                  <div>
+                     <p class="text-black hBaniere">Un Large Choix De <br> Cours</p>
+                     <p class="text-black pBaniere">choisir 213000 videos de cours en ligne avec <br> les mises a jour nouvautés chaque mois </p>
+                     <div>
+                        <button type="button" class="btn btn-primary border rounded-pill ps-lg-2  pe-lg-2">Explorer vos cours</button>
+                        <button type="button" class="btn  border border-warning fw-bolder text-warning rounded-pill   ps-lg-2  pe-lg-2">Commencer le cours <i class="i fa-solid fa-arrow-right"></i></button>
+                     </div>
+                  </div>
+                  <img src="image/baniere.png" class="d-sm-none d-lg-block" alt="image">
+                  
+            </article>
+         </section>
+         <div class="mt-3 mb-3">
+            <h1 class="fw-bold text-center">Featured Courses</h1>
+            <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui, aliquid? Lorem ipsum dolor <br> sit amet, consectetur adipisicing elit. At, odio!</p>
+         </div>
+         <section class="sectionCard container-fluid">
+           
+              <article>
+               <div class="card  border-0 border-bottom mt-3" style="width: 18rem;">
+                  <img src="image/js.png" class="card-img-top" alt="image">
+                  <div class="card-body">
+                     <p class="etoiles">
+                      <span class="etoile">★</span>
+                      <span class="etoile">★</span>
+                      <span class="etoile">★</span>
+                      <span class="etoile">★</span>
+                      <span class="etoile">★</span>
+                      <span class="fw-bolder">5.00</span>
+                      (<span class="n">1</span>)
+                     </p>
+                    <h6 class="card-title fw-bolder text-center">Cours Complet sur javaScript</h6>
+                    <p class="card-text fst-italic mt-3"><img src="image/testimonial-1.png" width="40" alt="image"> Par Leon Dilan Wabo</p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mt-2 align-items-center">
+                  <h6>$250</h6>
+                  <button type="button" class="btn text-primary border-primary fw-medium btnAdd"><i class="fa-solid fa-cart-shopping"></i> <span>Add to Cart</span></button>
+               </div>
+              </article>
+              <article>
+                  <div class="card  border-0 border-bottom mt-3" style="width: 18rem;">
+                     <img src="image/PHP.webp" class="card-img-top" alt="image">
+                     <div class="card-body">
+                        <p class="etoiles">
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="fw-bolder">5.00</span>
+                           (<span class="n">1</span>)
+                          </p>
+                       <h6 class="card-title fw-bolder text-center">Cours Complet sur PHP</h6>
+                       <p class="card-text fst-italic mt-3"><img src="image/testimonial-1.png" width="40" alt="image"> Par Gustave Gautier</p>
+                     
+                     </div>
+                   </div>
+                   <div class="d-flex justify-content-around mt-2 align-items-center">
+                     <h6>$250</h6>
+                     <button type="button" class="btn text-primary border-primary fw-medium btnAdd"><i class="fa-solid fa-cart-shopping"></i> <span>Add to Cart</span></button>
+                  </div>
+              </article>
+
+
+
+              <article>
+                  <div class="card  border-0 border-bottom mt-3" style="width: 18rem;">
+                     <img src="image/adobePre.webp" class="card-img-top" alt="image">
+                     <div class="card-body">
+                        <p class="etoiles">
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="fw-bolder">5.00</span>
+                           (<span class="n">1</span>)
+                          </p>
+                       <h6 class="card-title fw-bolder text-center">Cours Complet sur Adobe Pre</h6>
+                       <p class="card-text fst-italic mt-3"><img src="image/testimonial-1.png" width="40" alt="image"> Par Jhon Doe</p>
+                     </div>
+                   </div>
+                   <div class="d-flex justify-content-around mt-2 align-items-center">
+                     <h6>$250</h6>
+                     <button type="button" class="btn text-primary border-primary fw-medium btnAdd"><i class="fa-solid fa-cart-shopping"></i> <span>Add to Cart</span></button>
+                  </div>
+              </article>
+              <article>
+                     <div class="card  border-0 border-bottom mt-3" style="width: 18rem;">
+                        <img src="image/adobe-after-effects.jpg" class="card-img-top" alt="image">
+                        <div class="card-body">
+                           <p class="etoiles">
+                              <span class="etoile">★</span>
+                              <span class="etoile">★</span>
+                              <span class="etoile">★</span>
+                              <span class="etoile">★</span>
+                              <span class="etoile">★</span>
+                              <span class="fw-bolder">5.00</span>
+                              (<span class="n">1</span>)
+                             </p>
+                          <h6 class="card-title fw-bolder text-center">Cours Complet sur After Affect</h6>
+                          <p class="card-text fst-italic mt-3"><img src="image/testimonial-1.png" width="40" alt="image"> Par Igor Kollo  </p>
+                        
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-around mt-2 align-items-center">
+                        <h6>$250</h6>
+                        <button type="button" class="btn text-primary border-primary fw-medium btnAdd"><i class="fa-solid fa-cart-shopping"></i> <span>Add to Cart</span></button>
+                     </div>
+              </article>
+             
+
+
+              
+              <article>
+               <div class="card  border-0 border-bottom mt-3" style="width: 18rem;">
+                  <img src="image/canva.webp" class="card-img-top" alt="image">
+                  <div class="card-body">
+                     <p class="etoiles">
+                        <span class="etoile">★</span>
+                        <span class="etoile">★</span>
+                        <span class="etoile">★</span>
+                        <span class="etoile">★</span>
+                        <span class="etoile">★</span>
+                        <span class="fw-bolder">5.00</span>
+                        (<span class="n">1</span>)
+                       </p>
+                    <h6 class="card-title fw-bolder text-center">Cours Complet sur Canvas</h6>
+                    <p class="card-text fst-italic mt-3"><img src="image/testimonial-1.png" width="40" alt="image"> Par Borel David  </p>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-around mt-2 align-items-center">
+                  <h6>$250</h6>
+                  <button type="button" class="btn text-primary border-primary fw-medium btnAdd"><i class="fa-solid fa-cart-shopping"></i> <span>Add to Cart</span>t</button>
+               </div>
+              </article>
+              <article>
+                  <div class="card  border-0 border-bottom mt-3" style="width: 18rem;">
+                     <img src="image/flutter.png" class="card-img-top" alt="image">
+                     <div class="card-body">
+                        <p class="etoiles">
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="fw-bolder">5.00</span>
+                           (<span class="n">1</span>)
+                          </p>
+                       <h6 class="card-title fw-bolder text-center">Cours Complet sur Flutter</h6>
+                       <p class="card-text fst-italic mt-3"><img src="image/testimonial-1.png" width="40" alt="image"> Par Loic Piere  </p>
+                     
+                     </div>
+                   </div>
+                   <div class="d-flex justify-content-around mt-2 align-items-center">
+                     <h6>$250</h6>
+                     <button type="button" class="btn text-primary border-primary fw-medium btnAdd"><i class="fa-solid fa-cart-shopping"></i> <span>Add to Cart</span></button>
+                  </div>
+              </article>
+
+
+
+              <article>
+                  <div class="card  border-0 border-bottom mt-3" style="width: 18rem;">
+                     <img src="image/compta1.jpg" class="card-img-top" alt="image">
+                     <div class="card-body">
+                        <p class="etoiles">
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="etoile">★</span>
+                           <span class="fw-bolder">5.00</span>
+                           (<span class="n">1</span>)
+                          </p>
+                       <h6 class="card-title fw-bolder text-center">Cours sur La comptabilité</h6>
+                       <p class="card-text fst-italic mt-3"><img src="image/testimonial-1.png" width="40" alt="image"> Par Rudy Nathan  </p>
+                     </div>
+                   </div>
+                   <div class="d-flex justify-content-around mt-2 align-items-center">
+                     <h6>$250</h6>
+                     <button type="button" class="btn text-primary border-primary fw-medium btnAdd"><i class="fa-solid fa-cart-shopping"></i> <span>Add to Cart</span></button>
+                  </div>
+              </article>
+              <article>
+                     <div class="card  border-0 border-bottom mt-3" style="width: 18rem;">
+                        <img src="image/reseau1.jpg" class="card-img-top" alt="image">
+                        <div class="card-body">
+                           <p class="etoiles">
+                              <span class="etoile">★</span>
+                              <span class="etoile">★</span>
+                              <span class="etoile">★</span>
+                              <span class="etoile">★</span>
+                              <span class="etoile">★</span>
+                              <span class="fw-bolder">5.00</span>
+                              (<span class="n">1</span>)
+                             </p>
+                          <h6 class="card-title fw-bolder text-center">Cours Reseau info</h6>
+                          <p class="card-text fst-italic mt-3"><img src="image/testimonial-1.png" width="40" alt="image"> Par Justin Angu  </p>
+                        
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-around mt-2 align-items-center">
+                        <h6>$250</h6>
+                        <button type="button" class="btn text-primary border-primary fw-medium btnAdd"><i class="fa-solid fa-cart-shopping"></i> <span>Add to Cart</span></button>
+                     </div>
+              </article>
+             
+          
+          
+               
+         </section>
+        <div class="d-flex justify-content-center mt-5 mb-3"> <button type="button" class="btn btn-primary rounded-pill p-3">Parcouris Tout Les Cours</button></div>
+        <div class="iconeRef1">
+          <p><i class="fa-solid fa-graduation-cap" style="color:  rgb(0, 119, 255); transform: scale(5); margin-bottom: 10px;"></i><span>0</span>Apprenants</p>
+          <p><i class="fa-solid fa-certificate" style="color:  rgb(0, 119, 255); transform: scale(5); margin-bottom: 10px;"></i><span>0</span>Certifications</p>
+          <p><i class="fa-solid fa-user" style="color:  rgb(0, 119, 255); transform: scale(5); margin-bottom: 10px;"></i><span>0</span>Formateurs</p>
+          <p><i class="fa-solid fa-book" style="color:  rgb(0, 119, 255); transform: scale(5); margin-bottom: 10px;"></i><span>0</span>Cours Publiés</p>
+         
+        </div>
+        <div class="iconeRef2">
+         <p><i class="fa-brands fa-artstation" style="color:  rgb(0, 119, 255); transform: scale(5); margin-bottom: 10px;"></i><span><b>Arts & Dessin</b><br>25 Cours</span>  </p>
+         <p><i class="fa-solid fa-sack-dollar" style="color:  rgb(0, 119, 255); transform: scale(5); margin-bottom: 10px;"></i><span><b>Finnaces</b><br>17 Cours</span></p>
+         <p><i class="fa-solid fa-language" style="color:  rgb(0, 119, 255); transform: scale(4.5); margin-bottom: 10px;"></i><span><b>Lanques</b><br>83 Cours</span></p>
+         <p><i class="fa-solid fa-image" style="color:  rgb(0, 119, 255); transform: scale(5); margin-bottom: 10px;"></i><span><b>Developpement</b><br>112 Cours</span></p>
+         
+         <p><i class="fa-brands fa-artstation" style="color:  rgb(0, 119, 255); transform: scale(5); margin-bottom: 10px;"></i><span><b>Photographies</b><br>25 Cours</span></p>
+         <p><i class="fa-solid fa-sack-dollar" style="color:  rgb(0, 119, 255); transform: scale(5); margin-bottom: 10px;"></i><span><b>Audio Visuel</b><br>25 Cours</span></p>
+         <p><i class="fa-solid fa-language" style="color:  rgb(0, 119, 255); transform: scale(4.5); margin-bottom: 10px;"></i><span><b>Philosophie</b><br>7 Cours</span></p>
+         <p><i class="fa-solid fa-image" style="color:  rgb(0, 119, 255); transform: scale(5); margin-bottom: 10px;"></i><span><b>Art Oratoire</b><br>54 Cours</span></p>
+        </div>
+
+
+         <div class="homeCover">
+
+                     
+                   <P>pour avoir les offres spéciales <br> et les cours actualisés</P>
+                   <p>
+                     <input
+                        class="form-control shadow-none "
+                        type="email"
+                        placeholder="Adress email"
+                        aria-label="email"
+                        required
+                     />
+                     <i class="fa-solid fa-circle-exclamation text-danger" style="transform: scale(1.5); position: absolute; top: 20px; right: 107px; display: none;"></i>
+                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" >Enregistrer</button>
+                   </p>
+         </div>
+
+
+      </main>
+
+       <footer class="homeFooter border-top container-fluid mt-5 pt-3 pb-2">
+         <p class="ms-5">&copy;2023 HTTC, Inc</p>
+         <p class="me-5">
+            <i class="fa-brands fa-facebook" style="transform: scale(2.5);"></i>
+            <i class="fa-brands fa-x-twitter" style="transform: scale(2.5);"></i>
+            <i class="fa-brands fa-instagram-square" style="transform: scale(2.5);"></i>
+         </p>
+       </footer>
+
+     
       <script src="js/all.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/index.js"></script>
    </body>
 </html>

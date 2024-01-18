@@ -1,0 +1,232 @@
+header nav form input {
+  padding-left: 30px !important;
+  margin-left: 30px !important;
+  border: 2px solid rgba(0, 119, 255, 0.524) !important;
+}
+header nav form .search {
+  position: absolute !important;
+  top: 10px !important;
+  left: 40px !important;
+}
+header nav li:not(.panier, .profil) {
+  transition: all ease-in-out 0.5s;
+  font-weight: bolder;
+}
+header nav li:not(.panier, .profil):hover {
+  color: rgb(145, 8, 236) !important;
+}
+header nav li:not(.panier, .profil):hover:not(.dropdown-toggle):after {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(145, 8, 236) !important;
+  content: "";
+}
+header nav li:not(.panier, .profil) a:hover {
+  color: rgb(145, 8, 236) !important;
+}
+
+.hRespopnsive, main div.homeCover p:nth-child(1), main .baniere div p.hBaniere {
+  text-align: center;
+  margin-left: clamp(5px, 8vw, 48px);
+  font-weight: bolder;
+  font-size: clamp(10px, 5vw, 48px);
+}
+
+main .baniere {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("../../image/Hero BG.png");
+  background-size: cover;
+}
+main .baniere div p.pBaniere {
+  margin-left: clamp(5px, 8vw, 100px);
+}
+main .baniere div div {
+  display: flex;
+  gap: 5px;
+  margin-left: clamp(1px, 8vw, 100px);
+}
+main .baniere div div button {
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 50%;
+  font-size: clamp(5px, 5vw, 15px);
+}
+main .baniere div div button:nth-child(2),
+main .baniere div div button:nth-child(2) .i {
+  transition: all ease-in-out 0.5s;
+}
+main .baniere div div button:nth-child(2):hover {
+  background-color: yellow;
+  color: black !important;
+}
+main .baniere div div button:nth-child(2):hover .i {
+  transition: all ease-in-out 0.5s;
+  transform-origin: left;
+  transform: scaleX(1.5);
+}
+main .baniere img {
+  width: 40%;
+  height: 100%;
+}
+main .sectionCard {
+  display: grid;
+  grid-gap: 20px;
+  margin-left: 3%;
+  grid-template-columns: repeat(auto-fill, 18rem);
+}
+main .sectionCard article .btnAdd:hover {
+  color: white !important;
+  background-color: rgb(0, 119, 255);
+}
+main .sectionCard article .btnRemove {
+  color: red !important;
+  border: 1px solid red !important;
+}
+main .sectionCard article .btnRemove:hover {
+  color: white !important;
+  background-color: red;
+}
+main .sectionCard img {
+  cursor: pointer;
+}
+main .sectionCard .etoile {
+  color: rgb(255, 217, 0);
+  transform: scale(3);
+}
+main div.iconeRef1 {
+  margin-bottom: 50px;
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+main div.iconeRef1 p {
+  display: flex;
+  color: black;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  line-height: -10px;
+}
+main div.iconeRef1 p span {
+  margin-top: 20px;
+  height: 30px;
+  font-weight: bolder;
+  font-size: 25px;
+}
+main div.iconeRef2 {
+  padding: 100px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: center;
+  grid-gap: 60px;
+  width: 100%;
+  line-height: 50px;
+}
+main div.iconeRef2 p {
+  margin-left: 20%;
+  display: flex;
+  gap: 40px;
+}
+main div.iconeRef2 p span {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 120px !important;
+  line-height: 20px !important;
+}
+main div.homeCover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  background-image: url(../../image/Home\ BCover.jpg);
+}
+main div.homeCover p {
+  position: relative;
+}
+main div.homeCover p:nth-child(1) {
+  margin-top: 100px;
+  color: white;
+}
+main div.homeCover p:nth-child(2) {
+  width: 60%;
+  height: 50px;
+}
+@media screen and (max-width: 400px) {
+  main div.homeCover p:nth-child(2) {
+    width: 90%;
+  }
+}
+main div.homeCover p:nth-child(2) input {
+  height: inherit;
+  border: 1px solid blue;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+main div.homeCover p:nth-child(2) input:focus {
+  border: 1px solid blue;
+}
+main div.homeCover p:nth-child(2) input::-moz-placeholder {
+  font-size: 20px;
+}
+main div.homeCover p:nth-child(2) input::placeholder {
+  font-size: 20px;
+}
+main div.homeCover p:nth-child(2) button {
+  height: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 100px;
+}
+
+.homeFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.homeFooter p:nth-child(2) {
+  display: flex;
+  gap: 40px;
+}
+@media screen and (max-width: 400px) {
+  .homeFooter p:nth-child(2) {
+    gap: 30px;
+  }
+}
+
+/* 681 10 89 70
+<i class="fa-brands fa-artstation"></i>
+<i class="fa-solid fa-language"></i>
+<i class="fa-solid fa-image"></i>
+<i class="fa-solid fa-sack-dollar"></i>
+*/
+@media screen and (max-width: 995px) {
+  header nav form input {
+    margin-left: 0 !important;
+  }
+  header nav form .search {
+    left: 10px !important;
+  }
+  header nav .profil {
+    display: none;
+  }
+  header nav .logo {
+    transform: translateX(-25px);
+  }
+  main .baniere {
+    justify-content: center;
+  }
+  main .baniere img {
+    display: none;
+  }
+  main .baniere div div button {
+    padding: 10px 5px;
+  }
+}/*# sourceMappingURL=indes.css.map */
