@@ -1,4 +1,4 @@
-if (window.location.pathname === "/index.html") {
+if (window.location.pathname === "/index.html"|| window.location.pathname ==="/CoursEnLigne/") {
    let compteurIcon = document.querySelectorAll("main .iconeRef1 p span");
    let imgHome = document.querySelectorAll(".sectionCard img");
    let Npanier = document.querySelector('header .Npanier')
