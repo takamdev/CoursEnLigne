@@ -1,7 +1,15 @@
+body {
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,700;1,900&display=swap");
+}
 body *, body *::after, body *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+body .etoile {
+  color: rgb(255, 217, 0);
+  transform: scale(3);
 }
 body header nav form input {
   padding-left: 30px !important;
@@ -29,4 +37,98 @@ body header nav li:not(.panier, .profil):hover:not(.dropdown-toggle):after {
 }
 body header nav li:not(.panier, .profil) a:hover {
   color: rgb(145, 8, 236) !important;
+}
+body main {
+  margin: 0;
+  padding: 0;
+}
+body main section.videoYT {
+  display: flex;
+  gap: 5%;
+}
+@media screen and (max-width: 850px) {
+  body main section.videoYT {
+    flex-direction: column;
+  }
+}
+body main .videoYT article:nth-child(1) {
+  width: 70%;
+}
+@media screen and (max-width: 850px) {
+  body main .videoYT article:nth-child(1) {
+    width: 100%;
+  }
+}
+body main .videoYT article:nth-child(1) div {
+  margin-top: 70px;
+  width: 100%;
+  height: 500px;
+}
+@media screen and (max-width: 850px) {
+  body main .videoYT article:nth-child(1) div {
+    margin-left: -5%;
+  }
+}
+@media screen and (max-width: 400px) {
+  body main .videoYT article:nth-child(1) div {
+    height: 400px;
+    margin: 0;
+    padding: 0;
+  }
+}
+body main .videoYT article:nth-child(1) div .videoYoutube {
+  width: 100%;
+  height: 100%;
+}
+body main .videoYT article:nth-child(1) h3 {
+  font-weight: 700;
+  font-size: clamp(10px, 5vw, 30px);
+}
+body main .videoYT article:nth-child(1) p:nth-child(3) span {
+  font-weight: 700;
+}
+body main .videoYT article:nth-child(2) {
+  padding-right: 5%;
+  width: 25%;
+  margin-top: 70px;
+}
+@media screen and (max-width: 850px) {
+  body main .videoYT article:nth-child(2) {
+    width: 100%;
+  }
+}
+body main .videoYT article:nth-child(2) P {
+  margin-top: 20px;
+}
+body main .videoYT article:nth-child(2) .suiteVideo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 80px;
+}
+body main .videoYT article:nth-child(2) .suiteVideo div:nth-child(5) {
+  line-height: 0;
+}
+body main section.sousVideo {
+  margin-top: 50px;
+}
+body main section.sousVideo li {
+  position: relative;
+}
+body main section.sousVideo li a {
+  cursor: pointer;
+  color: black;
+  transition: all ease-in-out 0.5s;
+}
+body main section.sousVideo li a:hover {
+  color: rgb(145, 8, 236) !important;
+}
+body main section.sousVideo li a:hover::after {
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: rgb(145, 8, 236);
 }/*# sourceMappingURL=courjs.css.map */

@@ -1,3 +1,102 @@
-body{
-    @import "../mixins/mixins";
+body {
+   @import "../mixins/mixins";
+   main {
+      margin: 0;
+      padding: 0;
+      section.videoYT {
+         display: flex;
+         @media screen and (max-width: 850px) {
+            flex-direction: column;
+         }
+         gap: 5%;
+      }
+      .videoYT article:nth-child(1) {
+         @media screen and (max-width: 850px) {
+            width: 100%;
+         }
+         width: 70%;
+
+         div {
+            margin-top: 70px;
+            width: 100%;
+            height: 500px;
+            @media screen and (max-width: 850px) {
+              margin-left: -5%;
+            }
+            @media screen and (max-width: 400px) {
+              
+               height: 400px;
+               margin: 0;
+               padding: 0;
+             }
+            .videoYoutube {
+               width: 100%;
+               height: 100%;
+            }
+         }
+         h3 {
+            font-weight: 700;
+            font-size: clamp(10px, 5vw, 30px);
+         }
+         p:nth-child(3) span {
+            font-weight: 700;
+         }
+      }
+
+      .videoYT article:nth-child(2) {
+         @media screen and (max-width: 850px) {
+            width: 100%;
+         }
+         padding-right: 5%;
+         width: 25%;
+         margin-top: 70px;
+
+         P {
+            margin-top: 20px;
+         }
+
+         .suiteVideo {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 80px;
+            div:nth-child(5){
+               line-height: 0;
+       
+            
+            }
+            div:nth-child(6){
+              
+            
+            }
+         }
+      }
+
+      section.sousVideo{
+         margin-top: 50px;
+
+         li{
+            position: relative;
+            a{
+               cursor: pointer;
+               color: black;
+               transition: all ease-in-out .5s;
+              &:hover{
+               color:rgb(145, 8, 236)  !important;
+               &::after{
+                  position: absolute;
+                  bottom: 5px;
+                  left: 0;
+                  content: "";
+                  width: 100%;
+                  height: 2px;
+                  background-color: rgb(145, 8, 236)  ;
+                  
+               }
+              }
+            }
+           
+         }
+      }
+   }
 }
